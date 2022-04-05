@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from "./components/stateless/Card";
+import { DndProvider, useDrop } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+import Pile from "./components/stateless/Pile";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <Card suit="hearts" pips={1}></Card>
+        <Card suit="diamonds" pips={12}></Card>
+        <Card suit="clubs" pips={4}></Card>
+        <Card suit="spades" pips={7}></Card>
+        <Pile />
+      </div>
     </div>
   );
 }
